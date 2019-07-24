@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Car.Repository\Car.Repository.csproj" />
     <ProjectReference Include="..\Car.Domain\Car.Domain.csproj" />
+    <ProjectReference Include="..\Car.Repository\Car.Repository.csproj" />
   </ItemGroup>
 
 </Project>

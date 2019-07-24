@@ -25,12 +25,16 @@ namespace Car.Business
 
         public CarEntity Insert(CarEntity car)
         {
-            var allCars = _carRepository.GetAll();
-            var maxId = allCars.Any() ? allCars.Max(x => x.Id) : 0;
-
-            car.Id = maxId + 1;
+            car.Id = AutoIncrementId();
             car.Key = Guid.NewGuid();
             return _carRepository.Insert(car);
+        }
+
+        private int AutoIncrementId()
+        {
+            var allCars = _carRepository.GetAll();
+            var maxId = allCars.Any() ? allCars.Max(x => x.Id) : 0;
+            return maxId + 1;
         }
 
         public List<CarEntity> GetAll()
