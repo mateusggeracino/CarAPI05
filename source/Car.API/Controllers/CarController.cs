@@ -42,9 +42,11 @@ namespace Car.API.Controllers
             {
                 _logger.LogInformation("Received post request");
 
-                _carServices.Insert(car);
+                if (!ModelState.IsValid) return BadRequest(ModelState);
 
+                _carServices.Insert(car);
                 return Ok("success");
+
             }
             catch (Exception exception)
             {
