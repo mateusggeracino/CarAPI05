@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Car.Business\Car.Business.csproj" />
+    <ProjectReference Include="..\Car.Domain\Car.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
