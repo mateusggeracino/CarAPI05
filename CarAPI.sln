@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car.Domain", "source\Car.Do
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car.Repository", "source\Car.Repository\Car.Repository.csproj", "{EEE65B3E-A8FF-40F5-A941-0ABC14F7B447}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Tests", "6 - Tests", "{314D7CBE-89C5-4334-9F05-1CC914D0901A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarAPI.Tests", "tests\CarAPI.Tests\CarAPI.Tests.csproj", "{89136649-F343-4590-BE9D-104251F7D9F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,10 @@ Global
 		{EEE65B3E-A8FF-40F5-A941-0ABC14F7B447}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEE65B3E-A8FF-40F5-A941-0ABC14F7B447}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEE65B3E-A8FF-40F5-A941-0ABC14F7B447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89136649-F343-4590-BE9D-104251F7D9F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89136649-F343-4590-BE9D-104251F7D9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89136649-F343-4590-BE9D-104251F7D9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89136649-F343-4590-BE9D-104251F7D9F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +67,7 @@ Global
 		{3B01063A-B4AD-43E6-A7F8-91A295802CA4} = {2E05873B-2516-4648-AFD1-15B50B0D19AB}
 		{870234CD-FC3B-4DF4-8D20-54ADA3DB9E23} = {6B894E11-5F17-467A-9BBA-B9601128371A}
 		{EEE65B3E-A8FF-40F5-A941-0ABC14F7B447} = {7F8CE789-6E70-4115-AC48-15AD8771D2F7}
+		{89136649-F343-4590-BE9D-104251F7D9F1} = {314D7CBE-89C5-4334-9F05-1CC914D0901A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5AA482E6-80BB-4295-BB36-578ABE56C52E}

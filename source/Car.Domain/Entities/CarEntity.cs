@@ -2,7 +2,10 @@
 
 namespace Car.Domain.Entities
 {
-    public class CarEntity : Entity
+    /// <summary>
+    /// Entidade carro. Tem as propriedades de carro
+    /// </summary>
+    public sealed class CarEntity : Entity
     {
         [Required]
         [MaxLength(4)]

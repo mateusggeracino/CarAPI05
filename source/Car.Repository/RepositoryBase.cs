@@ -6,29 +6,13 @@ using Car.Repository.Interfaces;
 
 namespace Car.Repository
 {
+    /// <summary>
+    /// Classe concreta responsável por implementar as funcionalidades genéricas do crud
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class RepositoryBase<T> : IRepositoryBase<T> where T : Entity
     {
         protected static List<T> _data;
-        private static object _syncObj = new object();
-
-        public RepositoryBase()
-        {
-            Singleton();
-        }
-
-        private void Singleton()
-        {
-            if (_data == null)
-            {
-                lock (_syncObj)
-                {
-                    if (_data == null)
-                    {
-                        _data = new List<T>();
-                    }
-                }
-            }
-        }
 
         public T Insert(T obj)
         {
