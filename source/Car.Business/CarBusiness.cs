@@ -18,7 +18,7 @@ namespace Car.Business
         
         public void Delete(Guid key)
         {
-            var car = _carRepository.Find(x => x.Key == key).First();
+            var car = _carRepository.Find(x => x.UniqueKey == key).First();
 
             _carRepository.Delete(car);
         }
@@ -26,20 +26,23 @@ namespace Car.Business
         public CarEntity Insert(CarEntity car)
         {
             car.Id = AutoIncrementId();
-            car.Key = Guid.NewGuid();
+            car.UniqueKey = Guid.NewGuid();
             return _carRepository.Insert(car);
         }
 
         private int AutoIncrementId()
         {
-            var allCars = _carRepository.GetAll();
-            var maxId = allCars.Any() ? allCars.Max(x => x.Id) : 0;
+            var maxId = 0;
+            var allCars = GetAll();
+            if (allCars != null && allCars.Any())
+                maxId = allCars.Max(x => x.Id);
+
             return maxId + 1;
         }
 
         public List<CarEntity> GetAll()
         {
-            return _carRepository.GetAll();
+            return _carRepository.GetAll("select * from Car");
         }
 
         public List<CarEntity> GetByBrand(string brand)

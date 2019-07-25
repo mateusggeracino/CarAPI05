@@ -11,7 +11,7 @@ namespace Car.Repository.Interfaces
     {
         T Insert(T obj);
         void Delete(T obj);
-        List<T> GetAll();
+        List<T> GetAll(string query);
         List<T> Find(Func<T, bool> predicate);
     }
 }

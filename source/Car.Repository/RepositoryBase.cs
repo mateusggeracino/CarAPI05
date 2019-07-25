@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Car.Domain.Entities;
 using Car.Repository.Interfaces;
+using Car.Repository.Utilities;
+using Dapper;
 
 namespace Car.Repository
 {
@@ -25,13 +27,15 @@ namespace Car.Repository
             _data.Remove(obj);
         }
 
-        public List<T> GetAll()
+        public List<T> GetAll(string query)
         {
-            return _data;
+            var conn = ConnectionFactory.GetConnection();
+            return conn.Query<T>(query).ToList();
         }
 
         public List<T> Find(Func<T, bool> predicate)
         {
+            //_data.FindAll(x => x)
             return _data.Where(predicate).ToList();
         }
     }
