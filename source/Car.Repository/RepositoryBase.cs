@@ -27,10 +27,10 @@ namespace Car.Repository
             _data.Remove(obj);
         }
 
-        public List<T> GetAll(string query)
+        public List<T> GetAll(string table)
         {
             var conn = ConnectionFactory.GetConnection();
-            return conn.Query<T>(query).ToList();
+            return conn.Query<T>($"select * from {table}").ToList();
         }
 
         public List<T> Find(Func<T, bool> predicate)

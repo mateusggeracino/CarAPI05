@@ -42,7 +42,7 @@ namespace Car.Business
 
         public List<CarEntity> GetAll()
         {
-            return _carRepository.GetAll("select * from Car");
+            return _carRepository.GetAll("Car");
         }
 
         public List<CarEntity> GetByBrand(string brand)
