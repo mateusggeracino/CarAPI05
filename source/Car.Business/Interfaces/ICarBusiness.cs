@@ -6,7 +6,7 @@ namespace Car.Business.Interfaces
 {
     public interface ICarBusiness
     {
-        void Delete(Guid key);
+        bool Delete(Guid key);
         CarEntity Insert(CarEntity car);
         List<CarEntity> GetAll();
         List<CarEntity> GetByBrand(string brand);

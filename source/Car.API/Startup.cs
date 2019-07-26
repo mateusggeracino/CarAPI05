@@ -8,6 +8,7 @@ using Car.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -32,6 +33,7 @@ namespace Car.API
         {
             services.AddSingleton<IRepositoryBase<CarEntity>, RepositoryBase<CarEntity>>();
             services.AddTransient<ICarServices, CarServices>();
+            services.AddTransient<ICarRepository, CarRepository>();
             services.AddTransient<ICarBusiness, CarBusiness>();
         }
 

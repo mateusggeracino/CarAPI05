@@ -46,7 +46,6 @@ namespace Car.API.Controllers
 
                 _carServices.Insert(car);
                 return Ok("success");
-
             }
             catch (Exception exception)
             {

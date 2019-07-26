@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Dapper;
 
 namespace Car.Repository.Interfaces
 {
@@ -9,9 +10,9 @@ namespace Car.Repository.Interfaces
     /// <typeparam name="T"></typeparam>
     public interface IRepositoryBase<T>
     {
+        List<T> Query(string query, DynamicParameters parameters);
         T Insert(T obj);
-        void Delete(T obj);
-        List<T> GetAll(string table);
-        List<T> Find(Func<T, bool> predicate);
+        bool Delete(T obj);
+        List<T> GetAll();
     }
 }
