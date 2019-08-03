@@ -5,7 +5,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using Car.Domain.Entities;
 using Car.Repository.Interfaces;
-using Car.Repository.Utilities;
 using Dapper;
 using Dapper.Contrib.Extensions;
 using Microsoft.Extensions.Configuration;
